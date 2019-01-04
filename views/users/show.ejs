@@ -1,10 +1,10 @@
 <% include ../partials/header %>
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
             <h1 ><%= user.firstName +" "+ user.lastName %></h1>
             <div class="thumbnail">                
-                <img  src="<%= user.avatar %>" alt="<%= user.username %> avatar">
+                <img class="profile-picture" src="<%= user.avatar %>" alt="<%= user.username %> avatar">
                 <div class="caption">email <a href="mailto:<%= user.email %>"><%= user.username %></a></div>
                 <% if(currentUser && user._id.equals(currentUser._id)|| currentUser && currentUser.isAdmin){ %>
                         <a class = "btn btn-warning btn-xs " href="/users/<%= user._id %>/edit">edit profile</a>
